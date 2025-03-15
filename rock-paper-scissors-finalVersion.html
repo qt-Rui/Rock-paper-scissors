@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <title>Rock paper Scissors</title>
+
+    <link rel="stylesheet" href="css/rock-paper-scissors.css">
+
+
+</head>
+<body>
+    <p class="title">
+        Rock Paper Scissors
+    </p>
+
+
+    <!-- If player move is rock-->
+    <button
+    class="hand-pick-button"
+    onclick="
+    pcMove = pickPCMove();
+    playerMove = 'ROCK'
+    result = winOrLose(playerMove, pcMove);
+    ">
+        <img class="hand-pick-icon" src="hand-imgs/rock-emoji.png">
+    </button>
+
+
+    <!-- If player move is paper-->
+    <button
+    class="hand-pick-button"
+    onclick="
+        pcMove = pickPCMove();
+        playerMove = 'PAPER'
+        result = winOrLose(playerMove, pcMove);
+    ">
+        <img class="hand-pick-icon" src="hand-imgs/paper-emoji.png">
+    </button>
+
+    
+    <!-- If player move is Scissors-->
+    <button
+    class="hand-pick-button"
+    onclick="
+        pcMove = pickPCMove();
+        playerMove = 'SCISSORS'
+        result = winOrLose(playerMove, pcMove);
+    ">
+        <img class="hand-pick-icon" src="hand-imgs/scissors-emoji.png">
+    </button>
+
+
+    <p class="js-score score"
+    ></p> <!-- The display for scoreboard-->
+
+
+    <p class="js-result result"></p> <!-- The display for who won-->
+
+
+    <!-- The display for hands chosen -->
+    <p class="js-showMoves moves"></p>
+
+
+    <!-- Reset the score -->
+    <button
+    class="reset-button"
+    onclick = "
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScore();
+    ">
+        Reset score
+    </button>
+
+    <script src="scripts/rock-paper-scissors.js"></script>
+    </script>
+</body>
+</html>
