@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
     <title>Rock paper Scissors</title>
 
-    <link rel="stylesheet" href="css/rock-paper-scissors.css">
+    <link rel="stylesheet" href="rock-paper-scissors copy.css">
 
 
 </head>
@@ -15,44 +15,28 @@
     </p>
 
 
-    <!-- If player move is rock-->
+    <!-- Player move is rock-->
     <button
-    class="hand-pick-button"
-    onclick="
-    pcMove = pickPCMove();
-    playerMove = 'ROCK'
-    result = winOrLose(playerMove, pcMove);
-    ">
-        <img class="hand-pick-icon" src="hand-imgs/ROCK-emoji.png">
+    class="hand-pick-button js-rock-button">
+        <img class="hand-pick-icon" src="hand-imgs/rock-emoji.png">
     </button>
 
 
-    <!-- If player move is paper-->
+    <!-- Player move is paper-->
     <button
-    class="hand-pick-button"
-    onclick="
-        pcMove = pickPCMove();
-        playerMove = 'PAPER'
-        result = winOrLose(playerMove, pcMove);
-    ">
-        <img class="hand-pick-icon" src="hand-imgs/PAPER-emoji.png">
+    class="hand-pick-button js-paper-button">
+        <img class="hand-pick-icon" src="hand-imgs/paper-emoji.png">
     </button>
 
     
-    <!-- If player move is Scissors-->
+    <!-- Player move is scissors-->
     <button
-    class="hand-pick-button"
-    onclick="
-        pcMove = pickPCMove();
-        playerMove = 'SCISSORS'
-        result = winOrLose(playerMove, pcMove);
-    ">
-        <img class="hand-pick-icon" src="hand-imgs/SCISSORS-emoji.png">
+    class="hand-pick-button js-scissors-button">
+        <img class="hand-pick-icon" src="hand-imgs/scissors-emoji.png">
     </button>
 
 
-    <p class="js-score score"
-    ></p> <!-- The display for scoreboard-->
+    <p class="js-score score"></p> <!-- The display for scoreboard-->
 
 
     <p class="js-result result"></p> <!-- The display for who won-->
@@ -63,19 +47,16 @@
 
 
     <!-- Reset the score -->
-    <button
-    class="reset-button"
-    onclick = "
-    score.wins = 0;
-    score.losses = 0;
-    score.ties = 0;
-    localStorage.removeItem('score');
-    updateScore();
-    ">
+    <button class="reset-button">
         Reset score
     </button>
 
-    <script src="scripts/rock-paper-scissors.js"></script>
+    <p class="js-are-you-sure"></p>
+
+    <!-- autoplay the game-->
+    <button class="auto-button js-auto-button">Auto Play</button>
+
+    <script src="rock-paper-scissors copy 2.js"></script>
     </script>
 </body>
 </html>
